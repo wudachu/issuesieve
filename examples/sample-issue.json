@@ -1,0 +1,10 @@
+{
+  "repository": "acme/widgets",
+  "number": 42,
+  "type": "issue",
+  "title": "CLI crashes when the config file is missing",
+  "body": "Running `widgets build` on version 2.3.0 throws an exception when `.widgetsrc` does not exist. I expected the command to use defaults.",
+  "author": "sample-contributor",
+  "labels": ["needs-triage"],
+  "url": "https://github.com/acme/widgets/issues/42"
+}

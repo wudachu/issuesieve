@@ -1,0 +1,31 @@
+{
+  "repository": "acme/widgets",
+  "version": "v2.4.0",
+  "previous_version": "v2.3.0",
+  "pull_requests": [
+    {
+      "number": 81,
+      "title": "Add JSON output to the build command",
+      "body": "Adds a --json flag for machine-readable build results.",
+      "author": "maya",
+      "labels": ["feature"],
+      "url": "https://github.com/acme/widgets/pull/81"
+    },
+    {
+      "number": 84,
+      "title": "Fix missing config fallback",
+      "body": "Uses default settings when .widgetsrc is not present.",
+      "author": "lee",
+      "labels": ["bug"],
+      "url": "https://github.com/acme/widgets/pull/84"
+    },
+    {
+      "number": 88,
+      "title": "Document the JSON output format",
+      "body": "Adds examples and a schema reference to the CLI guide.",
+      "author": "sam",
+      "labels": ["documentation"],
+      "url": "https://github.com/acme/widgets/pull/88"
+    }
+  ]
+}

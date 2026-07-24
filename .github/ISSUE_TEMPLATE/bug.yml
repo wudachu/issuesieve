@@ -1,0 +1,32 @@
+name: Bug report
+description: Report a reproducible problem in IssueSieve
+title: "[Bug]: "
+labels: [bug, needs-triage]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Include what you expected and what actually happened.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Provide sanitized input and commands. Never include tokens or private repository data.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: IssueSieve version or commit
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Node.js version, operating system, and relevant configuration (without secrets).
+    validations:
+      required: true

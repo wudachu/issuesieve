@@ -1,0 +1,32 @@
+name: IssueSieve
+description: Human-in-the-loop AI triage for GitHub issues and pull requests
+author: IssueSieve contributors
+branding:
+  icon: filter
+  color: purple
+inputs:
+  openai-api-key:
+    description: OpenAI API key stored as a GitHub Actions secret
+    required: true
+  github-token:
+    description: GitHub token used to create or update the triage comment
+    required: true
+  model:
+    description: OpenAI model ID
+    required: false
+    default: gpt-5.6-sol
+  post-comment:
+    description: Set to false to write only to the workflow summary
+    required: false
+    default: "true"
+runs:
+  using: composite
+  steps:
+    - name: Run IssueSieve
+      shell: bash
+      env:
+        OPENAI_API_KEY: ${{ inputs.openai-api-key }}
+        OPENAI_MODEL: ${{ inputs.model }}
+        GITHUB_TOKEN: ${{ inputs.github-token }}
+        ISSUESIEVE_POST_COMMENT: ${{ inputs.post-comment }}
+      run: node "$GITHUB_ACTION_PATH/dist/action.js"
