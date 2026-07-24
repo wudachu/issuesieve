@@ -39,7 +39,7 @@
     "node": ">=20"
   },
   "dependencies": {
-    "openai": "^6.48.0",
+    "openai": "^6.49.0",
     "zod": "^4.4.3"
   },
   "devDependencies": {
